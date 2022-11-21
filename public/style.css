@@ -1,0 +1,372 @@
+*{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::placeholder{
+	font-size:.6rem;
+}
+::-webkit-scrollbar{
+	display:none;
+}
+
+
+:root{
+	--tupv-red: #7D0216;
+	--white: #fff;
+	--font-small: .8rem;
+	--font-medium: 1.7rem;
+	--font-large: 5rem;
+	--muted-color: rgba(0,0,0,.8);
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100%;
+	background-color: var(--tupv-red) ;
+	position:relative;
+}
+.wrapper .welcome{
+	height:100%;
+	max-width: 50%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.welcome .welcome-msg{
+	color: var(--white);
+	max-width: 60%;
+	display: flex;
+	line-height: 90px;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.welcome-msg span{
+	font-size: var(--font-large);
+	font-weight: 900;
+}
+.welcome-msg p{
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing:.2rem;
+	text-transform:uppercase;
+	line-height: 30px;
+}
+.wrapper .login-form{
+	height:100%;
+	width:100%;
+	max-width: 45%;
+	display:flex;
+	align-content: center;
+	flex-direction:column;
+	background-color: var(--white);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+.login-form .login-header{
+	width:100%;
+	height:20%;
+	margin: 4.4em 0 .7em 0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+.login-form img{
+	width:80px;
+	height:80px;
+}
+.login-form span{
+	margin-top: 20px;
+	font-size: var(--font-medium);
+	color: var(--tupv-red);
+	font-weight:600;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.login-form .login-roles{
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	width:50%;
+	height:5%;
+	margin: 1em auto;
+}
+.login-roles button{
+	padding:.4rem 2rem;
+	border-radius: 5px;
+	border: 1px solid var(--tupv-red);
+	background-color: none;
+	cursor: pointer;
+	color: var(--tupv-red);
+	font-size:var(--font-small);
+	font-weight:500;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+	outline: none;
+	transition: .3s ease;
+}
+.login-roles button:hover{
+	background-color: var(--tupv-red);
+	color: var(--white);
+}
+
+.login-form form{
+	width: 70%;
+	margin: 1rem auto;
+}
+
+form .app-id,
+form .app-pass{
+	display:flex;
+	flex-direction:column;
+	font-size: 1.1rem;
+	font-weight:500;
+	margin-bottom: .7em;
+	color: var(--muted-color);
+}
+
+.app-id input,
+.app-pass input{
+	padding: .3em .8em;
+	font-weight:500;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid var(--tupv-red);
+}
+.remember{
+	display:flex;
+}
+
+.remember label{
+	font-size: .9rem;
+	color: var(--muted-color);
+	margin-left: .6rem;
+}
+
+
+form input.btn{
+	margin: .9rem 0 .5rem 0;
+	width:100%!important;
+	padding:.7em 1em;
+	border: none;
+	background-color: var(--tupv-red);
+	border-radius: 5px;
+	color: var(--white);
+	font-size: .9rem;
+	font-weight:500;
+	letter-spacing: 2px;
+	cursor:pointer;
+	transition: .2s ease-out;
+}
+form input.btn:hover{
+	background-color: rgba(180, 0, 0, .7);
+}
+
+a[name=forgot]{
+	
+	color: var(--muted-color);
+	text-decoration: none;
+	font-size:.8rem;
+	transition: .1s ease;
+}
+a[name=forgot]:hover{
+	color: var(--tupv-red);
+}
+
+footer {
+	width: 70%;
+	margin: 0 auto;
+}
+footer p{
+	color: var(--muted-color);
+	font-size: .8rem;
+	text-align: center;
+}
+
+/*for student page*/
+
+nav {
+	width: 100%;
+	background-color:var(--tupv-red);
+	padding:1em 5em;
+	display:inline-flex;
+	justify-content:space-between;
+	align-items:center;
+}
+nav a{
+	text-decoration:none;
+	color: var(--white);
+	font-size: 1rem;
+	font-weight:500;
+}
+nav .navigation{
+	display:inline-flex;
+	justify-content:center;
+	align-items:center;
+}
+.navigation a img{
+	width:65px;
+	height:65px;
+	margin-right: 20px;
+}
+.navigation span{
+	color: var(--white);
+	font-size: 1.2rem;
+	text-transform:uppercase;
+	font-weight:600;
+
+}
+
+/*personal information*/
+
+.container{
+	width:100%;
+	height:auto;
+	display: flex;
+	flex-direction:column;
+	align-content:center;
+}
+
+.container form{
+	position:relative;
+}
+
+
+.container .show-id,
+.container .inputs{
+	max-width:100%;
+	padding:.9em 5em;
+	display:flex;
+	justify-content:space-between;
+	margin-top: 1em;
+}
+.container .msg{margin-top: -10px!important}
+.container form .fullnames,
+.container form .births,
+.container form .perma_address,
+.container form .mails,
+.container form .school,
+.container form .track,
+.container form .campus,
+.container form .choices{
+	width:100%;
+	padding:.3em 5em;
+	display: grid;
+}
+.container form .fullnames{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+.container form .births{
+	grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+	gap: 10px;
+}
+.container form .perma_address{
+	grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+	gap: 10px;
+}
+.container form .mails{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+.container form .school{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+.container form .track{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+
+.container form .campus{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+.container form .choices{
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	gap: 10px;
+}
+.perma_address #permanent{
+	font-size:1rem;
+}
+
+.forms {
+	margin-top: -10px;
+}
+
+form .form_group{
+	display:flex;
+	flex-direction:column;
+}
+.form_group label{
+	color: #000;
+	font-size: 1rem;
+	font-weight:500;
+}
+
+.form_group input{
+	padding: .3em!important;
+}
+
+.form_group input,
+.form_group select{
+	border: 1px solid var(--tupv-red);
+	outline: none;
+	padding: .1em .6em;
+	border-radius:5px;
+}
+
+
+
+.show-id span{
+	color: var(--tupv-red);
+	font-size: 1.4rem;
+	font-weight:600;
+}
+.inputs #title_msg{
+	width:100%;
+	padding:.5em .7em;
+	border-radius: 5px;
+	color: var(--white);
+	font-size: 1rem;
+	font-weight:500;
+	background-color:var(--tupv-red);
+
+}
+
+input[name=submit]{
+	position:relative;
+	float: right;
+	margin: 1.5rem 5rem 1.5rem 0;
+	width:20%;
+	background-color: var(--tupv-red);
+	color: var(--white);
+	padding: .9rem 1rem;
+	outline: none;
+	border:none;
+	cursor:pointer;
+	transition: .3s ease-out;
+
+}
+input[name=submit]:hover{
+	background-color: rgba(180, 0, 0, .8);
+
+}
+
+#line{
+	width:100%;
+	height:7px;
+	background-color:var(--tupv-red);
+	
+}
+footer{
+	margin: 3rem auto;
+}
+

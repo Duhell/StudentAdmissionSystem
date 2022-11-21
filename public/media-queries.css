@@ -1,0 +1,113 @@
+/*tablet size*/
+@media(max-width: 820px){
+	.wrapper .welcome{
+		display: none;
+	}
+	.wrapper .login-form{
+		max-width: 100%;
+	}
+
+	.login-form .login-roles{
+		min-width:40%;
+		margin: 0 auto;
+	}
+
+	.navigation a img{
+		width:55px;
+		height:55px;
+	}
+	.navigation span{
+		color: var(--white);
+		font-size: 1rem;
+	}
+	.container .show-id{
+		padding:.9em 2.5em;
+		margin-top: 1em;
+	}
+
+	.container div span{
+		font-size: 1.1rem;
+	}
+	.container .inputs{
+		padding: .2em 2em;
+	}
+	.container form .fullnames,
+	.container form .births,
+	.container form .perma_address,
+	.container form .mails,
+	.container form .school,
+	.container form .track,
+	.container form .campus,
+	.container form .choices{
+		padding: .3em 2em;
+		row-gap: 10px;
+	}
+	.container form .perma_address .form_group > #permanent{
+		min-width:100%;
+		font-size: 1rem;
+	}
+}
+
+/*phone size*/
+@media(max-width: 580px){
+	.login-form .login-roles{
+		min-width:60%;
+	}
+	nav {
+	width: 100%;
+	padding:1em 1em;
+	display:inline-flex;
+	justify-content:space-between;
+	align-items:center;
+	}
+	.navigation a img{
+	width:45px;
+	height:45px;
+	}
+	.navigation span{
+	color: var(--white);
+	font-size: .8rem;
+	}
+	.container .show-id{
+		padding:.9em 1.3em;
+		margin-top: 1em;
+	}
+
+	.container div span{
+		font-size: 1rem;
+	}
+	.container .inputs{
+		padding: .2em .3em;
+	}
+
+	.container form{
+		padding:.3em .2em;
+	}
+
+	.container form .fullnames,
+	.container form .births,
+	.container form .perma_address,
+	.container form .mails,
+	.container form .school,
+	.container form .track,
+	.container form .campus,
+	.container form .choices{
+		display:flex;
+		flex-direction:column;
+		font-size: .5rem;
+	}
+	.container form .mails{
+		margin-bottom: 2em;
+	}
+	.container form .perma_address .form_group > #permanent{
+		font-size: .8rem;
+	}
+
+}
+
+@media(max-width: 486px){
+	.login-form .login-roles{
+		min-width:80%;
+	}
+
+}
