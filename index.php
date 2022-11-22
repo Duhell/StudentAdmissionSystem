@@ -1,6 +1,6 @@
 <?php
 	include 'views/head.php';
-	include 'backend/route.php';
+	include 'backend/login.php';
 	
 ?>
 
@@ -25,14 +25,16 @@
 				<button type="submit" id="admin-btn" class="admin-btn">Admin</button>
 			</div>
 
+			<?php $warning; ?>
+
 			<form action="index.php" method="POST" class="student-login">
 				<div class="app-id">
 					<label>Applicant ID</label>
-					<input type="text" placeholder="ID" autofocus required autocomplete="off">
+					<input type="text" placeholder="ID" name="id" autofocus required autocomplete="off">
 				</div>
 				<div class="app-pass">
 					<label>Password</label>
-					<input type="password" placeholder="Password">
+					<input type="password" placeholder="Password" name="password">
 				</div>
 				<div class="remember">
 					<input type="checkbox">
@@ -43,28 +45,24 @@
 			</form>
 
 			<!-- admin login page -->
-			<form action="" class="admin-login">
+			<form action="index.php" method="POST" class="admin-login">
 				<div class="app-id">
 					<label>Admin ID</label>
-					<input type="text" placeholder="ID" autofocus required autocomplete="off">
+					<input type="text" placeholder="ID" name="id" autofocus required autocomplete="off">
 				</div>
 				<div class="app-pass">
 					<label>Password</label>
-					<input type="password" placeholder="Password">
+					<input type="password" placeholder="Password" name="password">
 				</div>
 				<div class="app-pass">
 					<label>Access Code</label>
-					<input type="text" placeholder="Code">
+					<input type="text" placeholder="Code" name="code">
 				</div>
 				
 				<input type="submit" name="login" value="LOGIN" class="btn">
 			</form>
 			<?php include 'views/footer.php' ?>
 		</div>
-
-		
-		
 		</div>
-	</div>	
 </body>
 </html>

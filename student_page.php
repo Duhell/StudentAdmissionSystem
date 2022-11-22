@@ -2,6 +2,7 @@
 	
 	include 'views/head.php';
 	include 'views/nav.php';
+	include 'backend/session.php';
 ?>
 	<div class="container">
 		<div class="show-id">
@@ -183,5 +184,3 @@
 	
 	<?php include 'views/footer.php' ?>
 
-</body>	
-</html>

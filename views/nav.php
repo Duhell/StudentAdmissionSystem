@@ -3,5 +3,5 @@
 		<a href="#"><img src="images/Logo.png" alt=""></a>
 		<span>Technological University of the Philippines Visayas</span>
 	</div>
-	<a href="index.php">LOGOUT</a>
+	<a href="./backend/logout.php">LOGOUT</a>
 </nav>
