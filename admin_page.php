@@ -6,7 +6,7 @@
 	include 'backend/session.php';
 
 	$query = mysqli_query($conn,"SELECT id FROM records ORDER BY id");
-	$row = mysqli_num_rows($query);
+	$total = mysqli_num_rows($query);
 ?>	
 <div class="admin">
 	<div class="list-header">
@@ -17,8 +17,9 @@
 		</form>
 	</div>
 	<div class="noStud">
-		<p>Total No. of Applicants: <span><?php echo $row ?></span></p>
+		<p>Total No. of Applicants: <span><?= $total ?></span></p>
 	</div>
+
 	<section>
     <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
@@ -28,8 +29,8 @@
           <th>Applicant ID</th>
           <th>Student Name</th>
           <th>Status</th>
-          <th>Edit</i></th>
-          <th>Delete</i></th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
     </table>
@@ -50,8 +51,8 @@
           <td><?php echo $row['appid']; ?></td>
           <td><?php echo $row['lastname']." ".$row['firstname'] ?></td>
           <td><?php echo $row['status'] ?></td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td><a href="#?id=<?= $row['id'] ?>"> Edit </a></td>
+          <td><a href="#id=<?= $row['id'] ?>"> Delete </a></td>
          <!--  <td><i class="fa-solid fa-pen-to-square"></i></td>
           <td><i class="fa-solid fa-trash"></td> -->
         </tr>
@@ -64,7 +65,13 @@
       </tbody>
     </table>
   </div>
+  
+ <form action="backend/download.php" method="post">
+  	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
+  </form>
 </section>
+
+
 </div>
 
 

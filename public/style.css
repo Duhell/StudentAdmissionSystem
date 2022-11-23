@@ -434,6 +434,8 @@ table{
 .tbl-header{
   background-color: var(--tupv-red);
  }
+
+
 .tbl-content{
 
   height:400px;
@@ -458,14 +460,14 @@ td{
   color: #000;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
-td i{
+td a{
+	text-decoration:none;
+	color: #000;
 	transition: .1s ease;
 	cursor:pointer;
 	scale: 1.2;
 }
-td i:hover{
-	color: var(--tupv-red);
-}
+
 
 section{
   margin: 0 50px 0 50px;
@@ -483,7 +485,4 @@ section{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 
-.modal{
-	position:absolute;
-	background-color:red;
-}
+
