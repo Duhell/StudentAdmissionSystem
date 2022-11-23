@@ -28,8 +28,8 @@
           <th>Applicant ID</th>
           <th>Student Name</th>
           <th>Status</th>
-          <th>Delete</i></th>
           <th>Edit</i></th>
+          <th>Delete</i></th>
         </tr>
       </thead>
     </table>
@@ -50,8 +50,10 @@
           <td><?php echo $row['appid']; ?></td>
           <td><?php echo $row['lastname']." ".$row['firstname'] ?></td>
           <td><?php echo $row['status'] ?></td>
-          <td><i class="fa-solid fa-trash"></td>
-          <td><i class="fa-solid fa-pen-to-square"></i></td>
+          <td>Edit</td>
+          <td>Delete</td>
+         <!--  <td><i class="fa-solid fa-pen-to-square"></i></td>
+          <td><i class="fa-solid fa-trash"></td> -->
         </tr>
         <?php	}
 		}else{

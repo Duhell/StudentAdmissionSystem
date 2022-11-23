@@ -2,12 +2,16 @@
 	
 	include 'views/head.php';
 	include 'views/nav.php';
+	include "backend/config.php";
 	include 'backend/session.php';
+
+
+
 ?>
 	<div class="container">
 		<div class="show-id">
 			<span>Set up your Profile</span>
-			<span>0588786656</span>
+			<span><?= $_SESSION['unqid'] ?></span>
 		</div>
 
 		<div class="inputs msg">
@@ -155,13 +159,16 @@
 				<div class="form_group">
 					<label>Campus</label>
 					<select name="" id="">
-						<option value="none">...</option>
+						<option value="TUPV">Technological University of the Philippines</option>
 					</select>
 				</div>
-				<div class="form_group">
+				<div class="form_group" id="selection">
 					<label>Department</label>
-					<select name="" id="">
-						<option value="none">...</option>
+					<select name="dep" id="dep" onchange="studentCourse(this.id,'course')">
+						<option value="">...</option>
+						<option value="COE">College of Engineering</option>
+						<option value="COACE">College of Automation and Control Engineering</option>
+						<option value="COET">College of Engineering Technology</option>
 					</select>
 				</div>
 			</div>
@@ -169,9 +176,7 @@
 			<div class="choices">
 				<div class="form_group">
 					<label>First Choice</label>
-					<select name="" id="">
-						<option value="none">...</option>
-					</select>
+					<select name="course" id="course" ></select>
 				</div>
 
 			</div>
@@ -181,6 +186,47 @@
 		</form>
 
 	</div>
+
+	<script>
+		function studentCourse(dep,cor){
+			
+			let department = document.getElementById(dep)
+			let cors = document.getElementById(cor)
+
+			cors.innerHTML = "";
+			if (department.value == "COE") {
+				var courseArray = [
+					"|Choose your course", 
+					"BSEcE|Bachelor of Science in ELectronics Engineering ",
+					"BSME|Bachelor of Science in Mechanical Engineering",
+					"BSEE|Bachelor of Science in Electrical Engineering",
+					"BSCpE|Bachelor of Science in Computer Engineering"
+					]
+			}else if (department.value == "COACE") {
+				var courseArray = [
+					"|Choose your course", 
+					"BSMxE|Bachelor of Science in Mechatronics Engineering",
+					"BSICE|Bachelor of Science in Instrumentation and Control Engineering",
+					"BETMxT|Bachelor of Technology in Mechatronics Technology",
+					]
+			}else if (department.value == "COET") {
+				var courseArray = [
+					"|Choose your course", 
+					"BSChem|Bachelor of Science in Chemistry",
+					"BET|Bachelor of Science in Engineering Technology",
+					]
+			}
+			for(let option in courseArray){
+				let valueName = courseArray[option].split("|"),
+					newElement = document.createElement("option");
+				newElement.value = valueName[0]
+				newElement.innerHTML = valueName[1]
+				cors.options.add(newElement)
+			}			
+
+		}
+
+	</script>
 	
 	<?php include 'views/footer.php' ?>
 
