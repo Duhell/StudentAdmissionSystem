@@ -51,7 +51,7 @@
           <td><?php echo $row['appid']; ?></td>
           <td><?php echo $row['lastname']." ".$row['firstname'] ?></td>
           <td><?php echo $row['status'] ?></td>
-          <td><a href="#?id=<?= $row['id'] ?>"> Edit </a></td>
+          <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
           <td><a href="#id=<?= $row['id'] ?>"> Delete </a></td>
          <!--  <td><i class="fa-solid fa-pen-to-square"></i></td>
           <td><i class="fa-solid fa-trash"></td> -->
@@ -65,15 +65,17 @@
       </tbody>
     </table>
   </div>
+
   
- <form action="backend/download.php" method="post">
+ <form action="backend/download.php" method="post" id="formDownload">
   	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
   </form>
 </section>
 
 
 </div>
-
+<br>
+<br>
 
 <?php include 'views/footer.php' ?>
 

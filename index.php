@@ -25,8 +25,7 @@
 				<button type="submit" id="admin-btn" class="admin-btn">Admin</button>
 			</div>
 
-			<?php $warning; ?>
-
+			
 			<form action="index.php" method="POST" class="student-login">
 				<div class="app-id">
 					<label>Applicant ID</label>
