@@ -27,6 +27,7 @@
 		    $cellnum = $field['cellnumber'];
 		    $telenum = $field['telenumber'];
 		    $city = $field['city'];
+		    $yearGrad = $field['yearGrad'];
 		    $lastAttended = $field['lastAttended'];
 			$schoolAddress = $field['schoolAddress'];
 			$track = $field['track'];
@@ -76,7 +77,7 @@
 				<label>Birth Date: </label>
 				<div class="box4">
 					<span>:</span>
-					<input type="text" name="birthdate" value="<?= $birthdate ?>">
+					<input type="text" name="birthdate" value="<?= date('M-d-Y',strtotime($birthdate)) ?>">
 				</div>
 			</div>
 			<div class="box3">

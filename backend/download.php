@@ -19,7 +19,23 @@
 					        <th>Applicant ID</th>
 					        <th>Last Name</th>
 					        <th>First Name</th>
-					        <th>Status</th>
+					        <th>Middle Name</th>
+					        <th>Birth Date</th>
+					        <th>Birth Place</th>
+					        <th>Age</th>
+					        <th>Gender</th>
+					        <th>Citizenship</th>
+					        <th>Address</th>
+					        <th>Email Address</th>
+					        <th>Cellphone Number</th>
+					        <th>Telephone Number</th>
+					        <th>School Last Attended</th>
+					        <th>School Address</th>
+					        <th>Track</th>
+					        <th>Year Graduated</th>
+					        <th>Campus</th>
+					        <th>Department</th>
+					        <th>First Choice Course</th>
 					    </tr>
 
       		';
@@ -32,7 +48,23 @@
 				          <td>'.$row["appid"].'</td>
 				          <td>'.$row["lastname"].'</td>
 				          <td>'.$row["firstname"].'</td>
-				          <td>'.$row["status"].'</td>
+				          <td>'.$row["middlename"].'</td>
+				          <td>'.$row["birthdate"].'</td>
+				          <td>'.$row["birthplace"].'</td>
+				          <td>'.$row["age"].'</td>
+				          <td>'.$row["gender"].'</td>
+				          <td>'.$row["citizenship"].'</td>
+				          <td>'.$row["unitno"]."/".$row["barangay"]."/".$row["city"]."/".$row["province"]."/".$row["zipcode"].'</td>
+				          <td>'.$row["email"].'</td>
+				          <td>'.$row["cellnumber"].'</td>
+				          <td>'.$row["telenumber"].'</td>
+				          <td>'.$row["lastAttended"].'</td>
+				          <td>'.$row["schoolAddress"].'</td>
+				          <td>'.$row["track"].'</td>
+				          <td>'.$row["yearGrad"].'</td>
+				          <td>'.$row["campus"].'</td>
+				          <td>'.$row["department"].'</td>
+				          <td>'.$row["firstchoice"].'</td>
 	      				</tr>
 				';
 			}

@@ -18,6 +18,7 @@
 		$email = $_POST['email'];
 		$cellnum = $_POST['cellnum'];
 		$telenum = $_POST['telenum'];
+		$yearGrad = $_POST['yearGrad'];
 		$lastAttended = $_POST['lastAttended'];
 		$schoolAddress = $_POST['schoolAddress'];
 		$track = $_POST['track'];
