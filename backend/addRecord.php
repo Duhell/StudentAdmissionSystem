@@ -1,6 +1,7 @@
 <?php 
 
 	include "config.php";
+	include "save.php";
 	if (isset($_POST['submit'])) {
 		$appid = $_SESSION['unqid'];
 		$lname = $_POST['lname'];
@@ -28,6 +29,24 @@
 		$dep = $_POST['dep'];
 		$course = $_POST['course'];
 
+		// for requirements
+
+			$form138	   =  "0";
+			$nso 	 	   =   "0";
+			$idpicture 	   =   "0";
+			$gmc		   =  "0";
+			$form137 	   =   "0";
+			$brgycertif	   =   "0";
+			$xray		   =   "0";
+			$drugtest	   =   "0";
+			$cbc		   =   "0";
+			$stool		   =   "0";
+			$urinalysis	   =   "0";
+			$serum		   =   "0";
+			$medcertif	   =   "0";
+
+
+		//sql
 
 		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice)
 			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course') ");
@@ -38,5 +57,11 @@
 		else{
 			die("error". $conn -> connect_error);
 		}
+
+		$query = "INSERT INTO `requirements` (appid,138_a,nso,idpicture,gmc,137_a,brgycertif,xray,drugtest,cbc,stool,urinalysis,serum,medcertif) values('$appid','$form138','$nso','$idpicture','$gmc','$form137','$brgycertif','$xray','$drugtest','$cbc','$stool','$urinalysis','$serum','$medcertif')";
+
+			$result = mysqli_query($conn,$query);
+
+		
 	}
 

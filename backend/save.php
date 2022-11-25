@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	include 'config.php';
+	$id = $_GET['id'];
 
 	if (isset($_POST['save'])) {
 			$appid         =  $_SESSION['appIDS'];
@@ -18,14 +19,10 @@
 			$serum		   =  $_POST['serum'];
 			$medcertif	   =  $_POST['medcertif'];
 
-			$query = "INSERT INTO `requirements` (appid,138_a,nso,idpicture,gmc,137_a,brgycertif,xray,drugtest,cbc,stool,urinalysis,serum,medcertif) values('$appid','$form138','$nso','$idpicture','$gmc','$form137','$brgycertif','$xray','$drugtest','$cbc','$stool','$urinalysis','$serum','$medcertif')";
+			$update = mysqli_query($conn,"UPDATE records SET 138_a='$form138'");
+			//to be continued...
 
-				$result = mysqli_query($conn,$query);
 
-				if ($result) {
-					header('location: ../admin_page.php');
-				}else{
-					header('location: ../admin_page.php');
-				}
+			
 
 	}
