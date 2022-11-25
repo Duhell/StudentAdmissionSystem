@@ -36,7 +36,37 @@
 			$course = $field['firstchoice'];
 		    $appid = $field['appid'];
 		}
-	}	
+	}
+	$requirements = "SELECT * from requirements WHERE appid = '{$appid}'" ;
+	$req = $conn->query($requirements);
+
+	if ($req->num_rows > 0) {
+		while ($value = $req->fetch_array()) {
+			$form138	   =  $value['138_a'];
+			$nso 	 	   =  $value['nso'];
+			$idpicture 	   =  $value['idpicture'];
+			$gmc		   =  $value['gmc'];
+			$form137 	   =  $value['137_a'];
+			$brgycertif	   =  $value['brgycertif'];
+			$xray		   =  $value['xray'];
+			$drugtest	   =  $value['drugtest'];
+			$cbc		   =  $value['cbc'];
+			$stool		   =  $value['stool'];
+			$urinalysis	   =  $value['urinalysis'];
+			$serum		   =  $value['serum'];
+			$medcertif	   =  $value['medcertif'];
+		}
+	}else{
+		$_SESSION['Warning'] = "This student is lack of requirements!";
+	}
+	$_SESSION['appIDS'] = $appid;
+	if ($form138&&$nso&&$idpicture&&$gmc&&$form137&&$brgycertif&&$xray&&$drugtest&&$cbc&&$stool&&$urinalysis&&$serum&&$medcertif) {
+		$_SESSION['checkStatus'] = "Complete";
+
+	}else{
+		$_SESSION['checkStatus'] = "Incomplete";
+	}
+	
 ?>
 <div class="stud_header_edit">
 	<div class="studName">
@@ -46,8 +76,7 @@
 	<br>
 	<a href="admin_page.php">&#171; Back</a>
 </div>
-
-<form class="grid-view">
+<form class="grid-view" action="backend/save.php" method="post">
 	<div class="box">
 		<div class="heading_title">Student Information</div>
 		<div class="box1">
@@ -199,27 +228,27 @@
 			<div class="box2">
 				<div>
 					<label>1. Original Form 138-A/Report Card (for SHS) Transcript of Records Certificate of Transfer Credential(for transferees)</label>
-					<input type="checkbox">
+					<input type="checkbox" name="138_a" value="1" >
 				</div>
 				<div>
 					<label>2. Photocopy of Birth Certificate from NSO or PSA</label>
-					<input type="checkbox">
+					<input type="checkbox" name="nso" value="1" >
 				</div>
 				<div>
 					<label>3. 3x3 I.D. Picture (2pcs)</label>
-					<input type="checkbox">
+					<input type="checkbox" name="idpicture" value="1" >
 				</div>
 				<div>
 					<label>4. Original Cerificate of Good Moral Character  </label>
-					<input type="checkbox">
+					<input type="checkbox" name="gmc" value="1" >
 				</div>
 				<div>
 					<label>5. SHS Student's Permanent Record or Form 137-A(if available only) </label>
-					<input type="checkbox">
+					<input type="checkbox" name="137_a" value="1" >
 				</div>
 				<div>
 					<label>6. Brgy/City Health Certification that you are not PUM or PUI or LSI</label>
-					<input type="checkbox">
+					<input type="checkbox" name="brgycertif" value="1" >
 				</div>
 		</div>
 		<div class="heading_title">Medical Requirements</div>
@@ -227,35 +256,34 @@
 				
 				<div>
 					<label>1. Results of the following laboratory tests</label>
-					<input type="checkbox">
 				</div>
 				<div>
 					<label>a. Chest X-Ray Result</label>
-					<input type="checkbox">
+					<input type="checkbox" name="xray" value="1" >
 				</div>
 				<div>
 					<label>b. Drug Test Result</label>
-					<input type="checkbox">
+					<input type="checkbox" name="drugtest" value="1" >
 				</div>
 				<div>
 					<label>c. CBC Test Result</label>
-					<input type="checkbox">
+					<input type="checkbox" name="cbc" value="1" >
 				</div>
 				<div>
 					<label>d. Stool Exam Result</label>
-					<input type="checkbox">
+					<input type="checkbox" name="stool" value="1" >
 				</div>
 				<div>
 					<label>e. Urinalysis</label>
-					<input type="checkbox">
+					<input type="checkbox" name="urinalysis" value="1" >
 				</div>
 				<div>
 					<label>f. Serum HBS Ag(Hepatitis B Antigen)</label>
-					<input type="checkbox">
+					<input type="checkbox" name="serum" value="1">
 				</div>
 				<div>
 					<label>2. Medical Certificate (from a Medical Doctor)</label>
-					<input type="checkbox">
+					<input type="checkbox" name="medcertif" value="1" >
 				</div>
 			</div>
 		</div>

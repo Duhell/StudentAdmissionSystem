@@ -4,8 +4,6 @@
 	$records = "";
 
 	if (isset($_POST['download'])) {
-		
-		
 		$sql = "SELECT * FROM records";
       	$result = mysqli_query($conn,$sql);
       	$i = 1;

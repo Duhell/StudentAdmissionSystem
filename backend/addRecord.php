@@ -2,8 +2,10 @@
 
 	include "config.php";
 	if (isset($_POST['submit'])) {
+		$appid = $_SESSION['unqid'];
 		$lname = $_POST['lname'];
 		$fname = $_POST['fname'];
+		$age = $_POST['age'];
 		$middlename = $_POST['middlename'];
 		$extension = $_POST['extension'];
 		$birthdate = $_POST['birthdate'];
@@ -27,8 +29,8 @@
 		$course = $_POST['course'];
 
 
-		$insert = mysqli_query($conn, "INSERT INTO records (lastname,firstname,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice)
-			values ('$lname','$fname','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course') ");
+		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice)
+			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course') ");
 		if ($insert) {
 			echo '<script>alert("You have submitted your information")</script>';
 			

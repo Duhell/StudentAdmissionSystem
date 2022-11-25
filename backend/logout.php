@@ -7,5 +7,6 @@
 	unset($_SESSION['password']);
 	unset($_SESSION['unqid']);
 	unset($_SESSION['role']);
+	unset($_SESSION['appIDS']);
 	header('location: ../index.php'); 
 	exit(); 
