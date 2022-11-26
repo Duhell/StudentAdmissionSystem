@@ -2,6 +2,8 @@
 
 	include 'config.php';
 	$records = "";
+	include "session.php";
+	
 
 	if (isset($_POST['download'])) {
 		$sql = "SELECT * FROM records";

@@ -45,15 +45,15 @@
       		$sql = "SELECT * FROM records";
       		$result = $conn->query($sql);
       		if ($result->num_rows > 0) {
-			while ($row = $result->fetch_array()) {
+						while ($row = $result->fetch_array()) {
 
 
       	?>
         <tr>
-          <td><?php echo $i++ ?></td>
-          <td><?php echo $row['appid']; ?></td>
-          <td><?php echo $row['lastname']." ".$row['firstname'] ?></td>
-          <td><?= $_SESSION['checkStatus'] ?></td>
+          <td><?= $i++ ?></td>
+          <td><?= $row['appid']; ?></td>
+          <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
+          <td><?= $row['status'] ?></td>
           <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
           <td><a href="backend/delete.php?id=<?= $row['id'] ?>"> Delete </a></td>
         

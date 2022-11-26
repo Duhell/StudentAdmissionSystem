@@ -1,7 +1,6 @@
 <?php 
 
 	include "config.php";
-	include "save.php";
 	if (isset($_POST['submit'])) {
 		$appid = $_SESSION['unqid'];
 		$lname = $_POST['lname'];
@@ -28,6 +27,7 @@
 		$campus = $_POST['campus'];
 		$dep = $_POST['dep'];
 		$course = $_POST['course'];
+		$status = "Incomplete";
 
 		// for requirements
 
@@ -46,10 +46,11 @@
 			$medcertif	   =   "0";
 
 
+
 		//sql
 
-		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice)
-			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course') ");
+		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice,status,yearGrad)
+			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course','$status','$yearGrad') ");
 		if ($insert) {
 			echo '<script>alert("You have submitted your information")</script>';
 			

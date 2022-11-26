@@ -39,7 +39,7 @@
 				<div class="form_group">
 					<label>Extension</label>
 					<select name="extension" id="">
-						<option value="none">...</option>
+						<option value="">...</option>
 						<option value="Jr.">Jr.</option>
 						<option value="Sr.">Sr.</option>
 						<option value="I">I</option>
@@ -149,7 +149,7 @@
 				</div>
 				<div class="form_group">
 					<label>Year Graduated</label>
-					<input type="text" placeholder="S.Y 2019-2020" name="yearGrad">
+					<input type="text" placeholder="ex: S.Y 2019-2020" name="yearGrad">
 				</div>
 				
 			</div>

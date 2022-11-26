@@ -23,7 +23,7 @@
 		    $barangay = $field['barangay'];
 		    $province = $field['province'];
 		    $zipcode = $field['zipcode'];
-		    $email = $field['extension'];
+		    $email = $field['email'];
 		    $cellnum = $field['cellnumber'];
 		    $telenum = $field['telenumber'];
 		    $city = $field['city'];
@@ -60,17 +60,12 @@
 		echo "Error";
 	}
 	$_SESSION['appIDS'] = $appid;
-	if ($form138&&$nso&&$idpicture&&$gmc&&$form137&&$brgycertif&&$xray&&$drugtest&&$cbc&&$stool&&$urinalysis&&$serum&&$medcertif) {
-		$_SESSION['checkStatus'] = "Complete";
-
-	}else{
-		$_SESSION['checkStatus'] = "Incomplete";
-	}
+	 
 	
 ?>
 <div class="stud_header_edit">
 	<div class="studName">
-		<span><?= $lastname." ".$firstname ?></span>
+		<span><?= $lastname." ".$firstname." ".$extension ?></span>
 		<span><?= $appid ?></span>
 	</div>
 	<br>
@@ -100,6 +95,13 @@
 				<div class="box4">
 					<span>:</span>
 					<input type="text" name="mname" value="<?= $middlename ?>">
+				</div>
+			</div>
+			<div class="box3">
+				<label>Extension: </label>
+				<div class="box4">
+					<span>:</span>
+					<input type="text" name="extension" value="<?= $extension ?>">
 				</div>
 			</div>
 			<div class="box3">
