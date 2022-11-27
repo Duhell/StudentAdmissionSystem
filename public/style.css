@@ -405,16 +405,16 @@ footer{
 	font-size: 1.5rem;
 }
 
-.list-header form{
+.list-header .livesearch{
 	width: 30%;
 	position:relative;
 }
-.list-header form input{
+.list-header .livesearch input{
 	padding: .6em 1.6rem;
 	width:100%;
 	border: 2px solid var(--tupv-red);
 } 
-.list-header form i{
+.list-header .livesearch i{
 	position:absolute;
 	left: 6px;
 	top: 12px;

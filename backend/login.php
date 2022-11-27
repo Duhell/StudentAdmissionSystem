@@ -2,11 +2,9 @@
 
 	include 'config.php';
 	session_start();
-
 	if (isset($_POST['login'])) {
 		$userid = $_POST['id'];
-		$userpass = $_POST['password'];
-		
+		$userpass = $_POST['password'];		
 		$sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$userid}' AND password = '{$userpass}'");
 		if ($sql->num_rows > 0) {
 			while($row = $sql->fetch_assoc()){
@@ -19,9 +17,7 @@
 			if($userid === $_SESSION['unqid'] && $userpass === $_SESSION['password'] && $_SESSION['role'] === 'student'){
 				if (empty($_SESSION['code'])) {
 					header('location: student_page.php');
-				}
-				
-				
+				}	
 			}elseif($userid === $_SESSION['unqid'] && $userpass === $_SESSION['password'] && $_SESSION['role'] === 'admin' ){
 				$accessCode = $_POST['code'];
 				if (empty($accessCode)) {

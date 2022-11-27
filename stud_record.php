@@ -143,7 +143,7 @@
 				<label>Address: </label>
 				<div class="box4">
 					<span>:</span>
-					<input type="text" name="unitno" value="<?= $unitno ?>">
+					<input type="text" name="unitno" value="<?= $unitno."/".$barangay."/".$city."/".$province."/".$zipcode ?>">
 				</div>
 			</div>
 			<div class="box3">

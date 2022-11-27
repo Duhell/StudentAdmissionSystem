@@ -12,16 +12,16 @@
 <div class="admin">
 	<div class="list-header">
 		<span>List of Students Applied</span>
-		<form>
+		<div class="livesearch">
 			<i class="fa-solid fa-magnifying-glass"></i>
-			<input type="search" placeholder="search">
-		</form>
+			<input type="text" placeholder="search" id="livesearch" autosave="off" autocomplete="off">
+		</div>
 	</div>
 	<div class="noStud">
 		<p>Total No. of Applicants: <span><?= $total ?></span></p>
 	</div>
-
-	<section>
+	<section  id="searchResult"></section>
+	<section id="main_section">
     <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
       <thead>
@@ -29,7 +29,7 @@
           <th>No.</th>
           <th>Applicant ID</th>
           <th>Student Name</th>
-          <th>Status</th>
+          <th>Requirements</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -42,11 +42,10 @@
       	<?php 
       		
       		$i = 1;
-      		$sql = "SELECT * FROM records";
+      		$sql = "SELECT * FROM records ORDER BY lastname ASC";
       		$result = $conn->query($sql);
       		if ($result->num_rows > 0) {
 						while ($row = $result->fetch_array()) {
-
 
       	?>
         <tr>
