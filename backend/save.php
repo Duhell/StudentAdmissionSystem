@@ -23,7 +23,7 @@
 
 			if ($form138&&$nso&&$idpicture&&$gmc&&$form137&&$brgycertif&&$xray&&$drugtest&&$cbc&&$stool&&$urinalysis&&$serum&&$medcertif){
 				if ($update){
-					$isComplete = mysqli_query($conn,"UPDATE records SET status = 'Complete' WHERE appid = '$appid'");
+					$isComplete = mysqli_query($conn,"UPDATE records SET status = 'Completed' WHERE appid = '$appid'");
 				}
 				header('location: ../admin_page.php');
 
