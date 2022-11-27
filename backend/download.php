@@ -3,7 +3,6 @@
 	include 'config.php';
 	$records = "";
 	include "session.php";
-	
 
 	if (isset($_POST['download'])) {
 		$sql = "SELECT * FROM records";
@@ -71,7 +70,7 @@
 			$records .= '</table>';
 
 			header('Content-Type:application/xls');
-			header('Content-Disposition:attachment;filename=report.xls');
+			header('Content-Disposition:attachment;filename=records.xls');
 			echo $records; 
 		}else{
 			echo "No record found";

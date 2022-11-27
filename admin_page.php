@@ -59,13 +59,15 @@
         </tr>
         <?php	}
 		}else{
-			echo "<script>alert('No Records have found!')</script>";
+			echo '<h3 style="margin: 7em 0; text-align:center">There\'s nothing here.</h3>';
 		}
 		$conn->close();
 		?> 
       </tbody>
     </table>
-  </div> 
+  </div>
+
+  
  <form action="backend/download.php" method="post" id="formDownload">
   	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
   </form>

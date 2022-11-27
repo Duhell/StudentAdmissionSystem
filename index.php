@@ -40,7 +40,6 @@
 					<label>Remember me</label>
 				</div>
 				<input type="submit" name="login" value="LOGIN" class="btn">
-				<a href="#" name="forgot">Forgot Password?</a>
 			</form>
 
 			<!-- admin login page -->

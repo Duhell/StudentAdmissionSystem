@@ -422,6 +422,16 @@ footer{
 }
 
 
+/*.modal{
+	position:fixed;
+	margin: 0 auto;
+	top: 30%;
+	padding: 1em;
+	max-width: 50ch;
+	border: 2px solid var(--tupv-red);
+}*/
+
+
 
 table{
   width:100%;
@@ -463,9 +473,10 @@ td a{
 	cursor:pointer;
 	scale: 1.2;
 	font-weight:500;
-	transition: .2s ease;
 }
-td a:hover{
+
+td a:hover
+{
 	color: var(--tupv-red);
 }
 
