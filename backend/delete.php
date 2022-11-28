@@ -3,10 +3,12 @@
 	include "config.php";
 	include "session.php";
 
-	$id = $_GET['id'];
+	$id = $_POST['id'];
 	$sql = "DELETE FROM records WHERE id = '$id'";
 
 	if ($conn->query($sql)) {
-		header("location: ../admin_page.php");
+		echo 1;
+		exit();
 	};
+	echo 0;
  ?>

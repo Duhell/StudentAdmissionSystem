@@ -3,6 +3,7 @@
 </footer>
 <script src="javascript\jquery.js"></script>
 <script src="javascript\livesearch.js"></script>
+<script src="javascript\delete.js"></script>
 
 </body>	
 </html>

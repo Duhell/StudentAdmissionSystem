@@ -422,14 +422,44 @@ footer{
 }
 
 
-/*.modal{
+.modal{
 	position:fixed;
 	margin: 0 auto;
 	top: 30%;
 	padding: 1em;
 	max-width: 50ch;
 	border: 2px solid var(--tupv-red);
-}*/
+	border-radius: 5px;
+}
+.modal_warning{
+	display:flex;
+	flex-direction:column;
+}
+.modal_warning p{
+	margin-top:.5rem;
+}
+.modal .modal_warning span{
+	font-weight: 600;
+}
+.modal_warning .modal_buttons{
+	width:50%;
+	margin: .6em 0 0 9em ;
+	display:flex;
+	justify-content:space-around;
+}
+.modal_buttons button,.modal_buttons a{
+	background-color: transparent;
+	border: none;
+	cursor:pointer;
+	text-decoration:none;
+}
+.modal_buttons a{
+	color: var(--tupv-red);
+	font-weight:500;
+}
+.modal::backdrop{
+	background: rgba(0, 0, 0, .7);
+}
 
 
 
@@ -475,9 +505,18 @@ td a{
 	font-weight:500;
 }
 
-td a:hover
+td a:hover,
+td button:hover
 {
 	color: var(--tupv-red);
+}
+
+td button{
+	background-color:transparent;
+	scale: 1.2;
+	font-weight:500;
+	cursor:pointer;
+	border: none;
 }
 
 #formDownload{

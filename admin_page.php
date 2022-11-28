@@ -54,8 +54,7 @@
           <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
           <td><?= $row['status'] ?></td>
           <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
-          <td><a href="backend/delete.php?id=<?= $row['id'] ?>"> Delete </a></td>
-        
+          <td><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>'>Delete</button></td>
         </tr>
         <?php	}
 		}else{
