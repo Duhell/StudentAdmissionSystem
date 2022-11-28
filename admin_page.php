@@ -14,7 +14,7 @@
 		<span>List of Students Applied</span>
 		<div class="livesearch">
 			<i class="fa-solid fa-magnifying-glass"></i>
-			<input type="text" placeholder="search" id="livesearch" autosave="off" autocomplete="off">
+			<input type="text" placeholder="search" id="livesearch" autosave="off" autocomplete="off" autofocus>
 		</div>
 	</div>
 	<div class="noStud">
@@ -54,7 +54,7 @@
           <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
           <td><?= $row['status'] ?></td>
           <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
-          <td><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>'>Delete</button></td>
+          <td><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>,<?=$row['appid']?>' >Delete</button></td>
         </tr>
         <?php	}
 		}else{

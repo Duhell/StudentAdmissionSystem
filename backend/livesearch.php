@@ -6,7 +6,7 @@
 	if (isset($_POST['inputSearch'])) {
 		$searchResult = $_POST['inputSearch'];
 
-		$Searh_query = mysqli_query($conn,"SELECT * FROM records WHERE appid LIKE '{$searchResult}%' OR lastname LIKE '{$searchResult}%' OR firstname LIKE '{$searchResult}%' OR status LIKE '{$searchResult}%' OR middlename LIKE '{$searchResult}%' OR yearGrad LIKE '{$searchResult}%' OR firstchoice LIKE '{$searchResult}%' OR department LIKE '{$searchResult}%' OR track LIKE '{$searchResult}%' LIMIT 3");
+		$Searh_query = mysqli_query($conn,"SELECT * FROM records WHERE appid LIKE '{$searchResult}%' OR lastname LIKE '{$searchResult}%' OR firstname LIKE '{$searchResult}%' OR status LIKE '{$searchResult}%' OR middlename LIKE '{$searchResult}%' OR yearGrad LIKE '{$searchResult}%' OR firstchoice LIKE '{$searchResult}%' OR department LIKE '{$searchResult}%' OR track LIKE '{$searchResult}%'");
 
 
 		if (mysqli_num_rows($Searh_query) > 0) {
@@ -31,7 +31,6 @@
  		 <div class="tbl-content">
    		 	<table cellpadding="0" cellspacing="0" border="0">
      		 <tbody>
-
       		<?php 
       		
       		$i = 1;

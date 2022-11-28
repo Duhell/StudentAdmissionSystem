@@ -1,9 +1,14 @@
+
+<!-- <=====================================HEAD=================================> -->
 <?php
 	include 'views/head.php';
 	include 'backend/login.php';
 	
 ?>
+<!-- <=========================================END HEAD===============================> -->
 
+
+	<!-- =====================================LANDING TEXT==========================> -->
 	<div class="wrapper">
 		<div class="welcome">
 			<div class="welcome-msg">
@@ -13,8 +18,11 @@
 				<p>Technological University of the Philippines Visayas</p>
 			</div>
 		</div>
+	<!-- ===================================END LANDING TEXT==========================> -->
 
-		<!-- student login form -->
+
+	<!-- ==========================STUDENT LOGIN FORM==========================> -->
+
 		<div class="login-form" >
 			<div class="login-header">
 				<img src="images/Logo.png" alt="">
@@ -35,14 +43,15 @@
 					<label>Password</label>
 					<input type="password" placeholder="Password" name="password">
 				</div>
-				<div class="remember">
-					<input type="checkbox">
-					<label>Remember me</label>
-				</div>
+				
 				<input type="submit" name="login" value="LOGIN" class="btn">
 			</form>
 
-			<!-- admin login page -->
+	<!-- ==========================END STUDENT LOGIN FORM==========================> -->
+
+
+	<!-- ==========================ADMINISTRATOR LOGIN FORM==========================> -->
+
 			<form action="index.php" method="POST" class="admin-login">
 				<div class="app-id">
 					<label>Admin ID</label>
@@ -62,5 +71,8 @@
 			<?php include 'views/footer.php' ?>
 		</div>
 		</div>
+
+	<!-- ==========================END ADMINISTRATOR LOGIN FORM==========================> -->
+
 </body>
 </html>

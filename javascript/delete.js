@@ -1,13 +1,16 @@
 $(document).ready(function(){
 	$(".delete_btn").click(function(){
 		var thisBtn = this;
-		var deleteID = $(this).data('id');
+		var deleteIDappID = $(this).data('id').split(',');
+		var deleteID = deleteIDappID[0];
+		var deleteAppId = deleteIDappID[1];
 		const confirmation = confirm("You are about to delete a record.\nContinuing will result to permanent delete of record.\nContinue?");
 		if (confirmation) {
 			$.ajax({
 				url: "./backend/delete.php",
 				method: "POST",
-				data: {id: deleteID},
+				data: {id: deleteID,
+					   appID: deleteAppId},
 				success: function(response){
 					if (response == 1) {
 						$(thisBtn).closest('tr').css('background','#7D0216');
@@ -19,10 +22,8 @@ $(document).ready(function(){
 					}
 					location.reload(true);
 				}
-
 			})
 		}
 
-		
 	});
 });

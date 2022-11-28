@@ -231,6 +231,18 @@ nav .navigation{
 
 /*personal information*/
 
+.message{
+	text-align:center;
+	font-weight:600;
+	font-size:1.3rem;
+	color: #f0f0f0;
+	margin: 30px auto;
+	width:40%;
+	padding:1em .5em;
+	border-radius:10px;
+	background-color:var(--tupv-red);
+}
+
 .container{
 	width:100%;
 	height:auto;
@@ -422,7 +434,7 @@ footer{
 }
 
 
-.modal{
+/*.modal{
 	position:fixed;
 	margin: 0 auto;
 	top: 30%;
@@ -459,7 +471,7 @@ footer{
 }
 .modal::backdrop{
 	background: rgba(0, 0, 0, .7);
-}
+}*/
 
 
 
@@ -491,11 +503,13 @@ td{
   padding: 15px;
   text-align: left;
   vertical-align:middle;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: #000;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
+
+
 td a{
 	text-decoration:none;
 	color: #000;

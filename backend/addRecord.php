@@ -1,5 +1,4 @@
 <?php 
-
 	include "config.php";
 	if (isset($_POST['submit'])) {
 		$appid = $_SESSION['unqid'];
@@ -52,8 +51,8 @@
 		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice,status,yearGrad)
 			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course','$status','$yearGrad') ");
 		if ($insert) {
-			echo '<script>alert("You have submitted your form!")</script>';
-			
+			$_SESSION['success_submit']	= "Successfully added your information.";
+			// header('location: ./student_page.php');	
 		}
 		else{
 			die("error". $conn -> connect_error);

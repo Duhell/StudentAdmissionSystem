@@ -1,14 +1,21 @@
 <?php
-	
 	include 'views/head.php';
 	include 'views/nav.php';
 	include "backend/config.php";
 	include 'backend/session.php';
 	include 'backend/addRecord.php';
-
-
-
 ?>
+
+
+	<?php
+
+		if (isset($_SESSION['success_submit'])) {
+			$successMsg = $_SESSION['success_submit'];
+			echo "<p class='message'>$successMsg</p>";
+			unset($_SESSION['success_submit']);
+		}
+
+	 ?>
 	<div class="container">
 		<div class="show-id">
 			<span>Set up your Profile</span>
@@ -21,7 +28,7 @@
 			</div>
 		</div>
 
-		<form method="post" class="forms">
+		<form action="student_page.php" method="POST" class="forms">
 
 			<div class="fullnames">
 				<div class="form_group">
@@ -170,7 +177,7 @@
 				<div class="form_group" id="selection">
 					<label>Department</label>
 					<select name="dep" id="dep" onchange="studentCourse(this.id,'course')">
-						<option value="">...</option>
+						<option value="">Choose</option>
 						<option value="COE">College of Engineering</option>
 						<option value="COACE">College of Automation and Control Engineering</option>
 						<option value="COET">College of Engineering Technology</option>
@@ -181,7 +188,9 @@
 			<div class="choices">
 				<div class="form_group">
 					<label>First Choice</label>
-					<select name="course" id="course" ></select>
+					<select name="course" id="course" >
+						<option value=""></option>
+					</select>
 				</div>
 
 			</div>

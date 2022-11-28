@@ -1,3 +1,6 @@
+
+	<!-- ==========================QUERIES==========================> -->
+
 <?php 
 	
 	include 'views/head.php';
@@ -63,6 +66,10 @@
 	 
 	
 ?>
+	<!-- ==========================END QUERIES==========================> -->
+
+	<!-- ==========================DISPLAY FULLNAME AND APPLICANT ID==========================> -->
+
 <div class="stud_header_edit">
 	<div class="studName">
 		<span><?= $lastname." ".$firstname." ".$extension ?></span>
@@ -81,8 +88,15 @@
 					<span>:</span>
 					<input type="text" name="lname" value="<?= $lastname ?>">
 				</div>
-				
 			</div>
+
+	<!-- ==========================END DISPLAY FULLNAME AND APPLICANT ID==========================> -->
+
+
+
+	<!-- ==========================PERSONAL INFO ==========================> -->
+
+
 			<div class="box3">
 				<label>First Name: </label>
 				<div class="box4">
@@ -168,6 +182,9 @@
 				</div>
 			</div>
 		</div>
+
+	<!-- ==========================PREVIOUS SCHOOL==========================> -->
+
 		<div class="heading_title">School Last Attended</div>
 		<div class="box1">
 			<div class="box3">
@@ -199,6 +216,11 @@
 				</div>
 			</div>
 		</div>
+	<!-- ==========================END PREVIOUS SCHOOL==========================> -->
+
+	<!-- ==========================TUPV AND COURSES==========================> -->
+
+
 		<div class="heading_title">Campus</div>
 		<div class="box1">
 			<div class="box3">
@@ -225,6 +247,11 @@
 			</div>
 		</div>
 	</div>
+	<!-- ==========================END TUPV AND COURSES==========================> -->
+
+	<!-- ==========================REQUIREMENTS==========================> -->
+
+
 	<div class="box">
 		<div class="heading_title">Requirements</div>
 			<div class="box2">
@@ -254,6 +281,9 @@
 					<input type="checkbox" name="brgycertif" value="1" <?php if ($brgycertif) {echo "checked";} ?>>
 				</div>
 		</div>
+
+	<!-- ==========================MEDICAL REQUIREMENTS==========================> -->
+
 		<div class="heading_title">Medical Requirements</div>
 		<div class="box2">
 				
