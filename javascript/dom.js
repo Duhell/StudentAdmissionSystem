@@ -6,6 +6,7 @@ window.addEventListener('load',()=>{
 	document.querySelector('#stud-btn').style.color="#fff"
 	stud_login_form.style.display="block"
 	admin_login_form.style.display="none"
+	
 })
 
 document.addEventListener('click', e =>{

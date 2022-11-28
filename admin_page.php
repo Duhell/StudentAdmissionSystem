@@ -1,14 +1,13 @@
+<div class="preload"></div>
+
 <?php
-	
 	include 'views/head.php';
 	include 'views/nav.php';
 	include 'backend/config.php';
 	include 'backend/session.php';
-
 	$query = mysqli_query($conn,"SELECT id FROM records ORDER BY id");
 	$total = mysqli_num_rows($query);
-
-?>	
+?>
 <div class="admin">
 	<div class="list-header">
 		<span>List of Students Applied</span>

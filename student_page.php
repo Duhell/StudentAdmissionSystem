@@ -1,3 +1,5 @@
+<div class="preload"></div>
+
 <?php
 	include 'views/head.php';
 	include 'views/nav.php';
