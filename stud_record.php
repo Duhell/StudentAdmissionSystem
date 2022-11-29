@@ -1,9 +1,11 @@
+<?php   
+	include 'views/head.php';
+?>
 <div class="preload"></div>
 	<!-- ==========================QUERIES==========================> -->
 
 <?php 
 	
-	include 'views/head.php';
 	include 'views/nav.php';
 	include "backend/config.php";
 	include 'backend/session.php';

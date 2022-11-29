@@ -4,6 +4,8 @@
 <script src="javascript\jquery.js"></script>
 <script src="javascript\livesearch.js"></script>
 <script src="javascript\delete.js"></script>
+<script src="javascript\year-select.js"></script>
+<script src="javascript\selectYears.js"></script>
 <script>
 	window.addEventListener('load',()=>{
 		document.querySelector('.preload').style.display = 'none';

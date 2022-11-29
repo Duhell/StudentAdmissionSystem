@@ -403,6 +403,18 @@ footer{
 	margin: 0 auto;
 }
 
+.yearSelection{
+	margin-top: .7rem;
+	width:30%;
+}
+.yearSelection .yearSelect{
+	width:100%;
+	padding: .2rem .6rem;
+	outline:none;
+	border-radius: 5px 0 5px 0;
+}
+
+
 .list-header,
 .noStud{
 	max-width: 88%;

@@ -1,14 +1,14 @@
+<?php   
+	include 'views/head.php';
+?>
 <div class="preload"></div>
 
 <?php
-	include 'views/head.php';
 	include 'views/nav.php';
 	include "backend/config.php";
 	include 'backend/session.php';
 	include 'backend/addRecord.php';
 ?>
-
-
 	<?php
 
 		if (isset($_SESSION['success_submit'])) {

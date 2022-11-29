@@ -1,7 +1,8 @@
-<div class="preload"></div>
-
-<?php
+<?php   
 	include 'views/head.php';
+?>
+<div class="preload"></div>
+<?php
 	include 'views/nav.php';
 	include 'backend/config.php';
 	include 'backend/session.php';
@@ -14,12 +15,17 @@
 		<div class="livesearch">
 			<i class="fa-solid fa-magnifying-glass"></i>
 			<input type="text" placeholder="search" id="livesearch" autosave="off" autocomplete="off" autofocus>
+			<div class="yearSelection" style="float: right;">
+					<input class="yearSelect" value="<?=date('Y',time())?>">
+			</div>
 		</div>
+
 	</div>
 	<div class="noStud">
 		<p>Total No. of Applicants: <span><?= $total ?></span></p>
 	</div>
 	<section  id="searchResult"></section>
+	<section  id="sortYear"></section>
 	<section id="main_section">
     <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
