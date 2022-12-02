@@ -3,10 +3,13 @@
 ?>
 <div class="preload"></div>
 <?php
+  $thisYear = date('Y',time());
+
 	include 'views/nav.php';
 	include 'backend/config.php';
 	include 'backend/session.php';
-	$query = mysqli_query($conn,"SELECT id FROM records ORDER BY id");
+	
+	$query = mysqli_query($conn,"SELECT id FROM records WHERE created_At LIKE '{$thisYear}%'  ORDER BY id");
 	$total = mysqli_num_rows($query);
 ?>
 <div class="admin">
@@ -15,17 +18,19 @@
 		<div class="livesearch">
 			<i class="fa-solid fa-magnifying-glass"></i>
 			<input type="text" placeholder="search" id="livesearch" autosave="off" autocomplete="off" autofocus>
-			<div class="yearSelection" style="float: right;">
-					<input class="yearSelect" value="<?=date('Y',time())?>">
-			</div>
+			
 		</div>
 
 	</div>
 	<div class="noStud">
-		<p>Total No. of Applicants: <span><?= $total ?></span></p>
+		<p id="total">Total No. of Applicants this year: <span id="totalNum"><?=$total?></span></p>
+		<div class="yearSelection" style="float: right;">
+				<input class="yearSelect" value="<?=date('Y',time())?>">
+		</div>
 	</div>
+	
 	<section  id="searchResult"></section>
-	<section  id="sortYear"></section>
+
 	<section id="main_section">
     <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
@@ -45,9 +50,8 @@
     <table cellpadding="0" cellspacing="0" border="0">
       <tbody>
       	<?php 
-      		
       		$i = 1;
-      		$sql = "SELECT * FROM records ORDER BY lastname ASC";
+      		$sql = "SELECT * FROM records WHERE created_At LIKE '{$thisYear}%' ORDER BY lastname ASC ";
       		$result = $conn->query($sql);
       		if ($result->num_rows > 0) {
 						while ($row = $result->fetch_array()) {
@@ -70,8 +74,6 @@
       </tbody>
     </table>
   </div>
-
-  
  <form action="backend/download.php" method="post" id="formDownload">
   	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
   </form>

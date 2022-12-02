@@ -6,7 +6,7 @@
 }
 
 .preload{
-	background: rgba(255, 2555, 255, .8) url(Preloader1.gif) no-repeat center center;
+	background: rgba(255, 2555, 255, 1) url(Preloader.gif) no-repeat center center;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
@@ -404,8 +404,9 @@ footer{
 }
 
 .yearSelection{
-	margin-top: .7rem;
-	width:30%;
+	margin-top: 0rem;
+	width:10%;
+
 }
 .yearSelection .yearSelect{
 	width:100%;
@@ -426,6 +427,11 @@ footer{
 }
 .noStud{
 	padding: 0!important;
+	align-content:center;
+}
+.noStud p{
+	padding: 0;
+	margin:0;
 }
 .noStud p span{
 	color: var(--tupv-red);
