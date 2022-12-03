@@ -8,5 +8,6 @@
 	unset($_SESSION['unqid']);
 	unset($_SESSION['role']);
 	unset($_SESSION['appIDS']);
+	unset($_SESSION['yearResult']);
 	header('location: ../index.php'); 
 	exit(); 

@@ -25,7 +25,7 @@
 	<div class="noStud">
 		<p id="total">Total No. of Applicants this year: <span id="totalNum"><?=$total?></span></p>
 		<div class="yearSelection" style="float: right;">
-				<input class="yearSelect" value="<?=date('Y',time())?>">
+				<input class="yearSelect" value="<?=date("Y",time())?>">
 		</div>
 	</div>
 	
@@ -78,6 +78,7 @@
   	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
   </form>
 </section>
+
 </div>
 <br>
 <br>

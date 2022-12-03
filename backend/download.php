@@ -4,8 +4,14 @@
 	$records = "";
 	include "session.php";
 
+	if (isset($_SESSION['yearResult'])) {
+		$dateToDownload = $_SESSION['yearResult'];
+	}else{
+		$dateToDownload = date("Y",time());
+	}
+	
 	if (isset($_POST['download'])) {
-		$sql = "SELECT * FROM records";
+		$sql = "SELECT * FROM records WHERE created_At LIKE '{$dateToDownload}%' ORDER BY lastname ASC";
       	$result = mysqli_query($conn,$sql);
       	$i = 1;
       		if (mysqli_num_rows($result) > 0) {
@@ -73,7 +79,7 @@
 			header('Content-Disposition:attachment;filename=records.xls');
 			echo $records; 
 		}else{
-			echo "No record found";
+			echo '<h3 style="margin: 7em 0; text-align:center">No record found.</h3>';
 		}
 
 	}

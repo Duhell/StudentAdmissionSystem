@@ -4,6 +4,7 @@
 	include "session.php";
 	if(isset($_POST['years'])){
 		$yearResult = $_POST['years'];
+		$_SESSION['yearResult']=$yearResult;
 		$query = mysqli_query($conn,"SELECT * FROM records WHERE created_At LIKE '{$yearResult}%' ORDER BY lastname ASC");
 		if (mysqli_num_rows($query) > 0) {
 		?>
