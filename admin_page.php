@@ -60,8 +60,8 @@
         <tr>
           <td><?= $i++ ?></td>
           <td><?= $row['appid']; ?></td>
-          <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
-          <td><?= $row['status'] ?></td>
+          <td><?= strtoupper($row['lastname'])." ".strtoupper($row['firstname'])." ".strtoupper($row['extension']) ?></td>
+          <td><?= strtoupper($row['status']) ?></td>
           <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
           <td><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>,<?=$row['appid']?>' >Delete</button></td>
         </tr>

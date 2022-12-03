@@ -21,6 +21,7 @@
 		          <th>Applicant ID</th>
 		          <th>Student Name</th>
 		          <th>Requirements</th>
+		          <th>Year</th>
 		          <th>Edit</th>
 		          <th>Delete</th>
 		        </tr>
@@ -41,6 +42,7 @@
 	          <td><?= $row['appid']; ?></td>
 	          <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
 	          <td><?= $row['status'] ?></td>
+	          <td><?= date('Y',strtotime($row['created_At'])) ?></td>
 	          <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
 	          <td><a href="backend/delete.php?id=<?= $row['id'] ?>"> Delete </a></td>
         	</tr> 
