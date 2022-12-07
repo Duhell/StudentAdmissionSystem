@@ -3,6 +3,8 @@
 	include "config.php";
 	include "session.php";
 
+	//displaying the search results 
+
 	if (isset($_POST['inputSearch'])) {
 		$searchResult = $_POST['inputSearch'];
 

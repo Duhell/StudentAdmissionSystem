@@ -2,10 +2,18 @@
 
 	include 'config.php';
 	session_start();
+
+	//login system
+
 	if (isset($_POST['login'])) {
 		$userid = $_POST['id'];
-		$userpass = $_POST['password'];		
+		$userpass = $_POST['password'];
+
+		//login query	
+
 		$sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$userid}' AND password = '{$userpass}'");
+		
+		//end of login query
 		if ($sql->num_rows > 0) {
 			while($row = $sql->fetch_assoc()){
 				$_SESSION['id'] = $row['id'];

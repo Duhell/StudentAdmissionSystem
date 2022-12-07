@@ -10,6 +10,8 @@
 	include "backend/config.php";
 	include 'backend/session.php';
 
+	//Display the records for editing
+
 	$id = $_GET['id'];
 	$query = "SELECT * FROM records WHERE id = '{$id}'";
 	$res = $conn->query($query);

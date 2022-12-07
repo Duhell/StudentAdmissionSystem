@@ -3,6 +3,7 @@
 	include "config.php";
 	include "session.php";
 
+	//Delete the records and the requirements of a specific ID 
 	$id = $_POST['id'];
 	$appID = $_POST['appID'];
 	

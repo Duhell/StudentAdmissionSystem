@@ -4,6 +4,8 @@
 	$records = "";
 	include "session.php";
 
+	//download the record of the current year or the previous year
+
 	if (isset($_SESSION['yearResult'])) {
 		$dateToDownload = $_SESSION['yearResult'];
 	}else{

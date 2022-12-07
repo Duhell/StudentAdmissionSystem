@@ -15,6 +15,16 @@ $(document).ready(function(){
 		}else{
 			$("#searchResult").css("display", "none");
 			$("#main_section").css("display", "block");
+			$.ajax({
+				url: "./backend/displayTotal.php",
+				method: "POST",
+				data: {total: new Date().getFullYear()},
+				success: function(data){
+					$("#totalNum").html(data);
+					$(".yearSelect").val(new Date().getFullYear())
+				}
+				
+			});
 		}
 	});
 });

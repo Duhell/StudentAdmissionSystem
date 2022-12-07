@@ -29,15 +29,23 @@
 			$dep           =  $_POST['dep'];
 			$course        =  $_POST['choice'];
 
+			//update for requirements
+
 			$updateRequirements = mysqli_query($conn,"UPDATE requirements SET 138_a='$form138',nso ='$nso',idpicture = '$idpicture',gmc = '$gmc',137_a = '$form137',brgycertif = '$brgycertif', xray = '$xray',drugtest = '$drugtest', cbc = '$cbc',stool = '$stool', urinalysis = '$urinalysis', serum = '$serum',medcertif = '$medcertif' WHERE appid = '$appid'");
+
+			//update for records
+
 			$updateRecords = mysqli_query($conn,"UPDATE records SET lastname='$lastname',firstname='$firstname',middlename='$middlename',extension='$extension',age='$age',email='$email',cellnumber='$cellnum',telenumber='$telenum',department='$dep',firstchoice='$course' WHERE appid = '$appid'");
 
+
+			//if all true then set status to complete otherwise set status to incomplete
+
 			if ($form138&&$nso&&$idpicture&&$gmc&&$form137&&$brgycertif&&$xray&&$drugtest&&$cbc&&$stool&&$urinalysis&&$serum&&$medcertif){
+
 				if ($updateRequirements){
 					$isComplete = mysqli_query($conn,"UPDATE records SET status = 'Completed' WHERE appid = '$appid'");
 				}
 				header('location: ../admin_page.php');
-
 			}else{
 				if ($updateRequirements){
 					$isComplete = mysqli_query($conn,"UPDATE records SET status = 'Incomplete' WHERE appid = '$appid'");

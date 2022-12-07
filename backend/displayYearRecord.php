@@ -2,6 +2,9 @@
 
 	include "config.php";
 	include "session.php";
+
+	//Display the records based on the current year or the previous year
+	
 	if(isset($_POST['years'])){
 		$yearResult = $_POST['years'];
 		$_SESSION['yearResult']=$yearResult;
