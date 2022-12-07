@@ -74,11 +74,10 @@
       </tbody>
     </table>
   </div>
- <form action="backend/download.php" method="post" id="formDownload">
+</section>
+<form action="backend/download.php" method="post" id="formDownload">
   	 <button type="submit" name="download" id="download" style="padding: .5rem 1rem; background-color:#7D0216; float: right; border: none; color: #fff; font-weight: 500; cursor:pointer;">Download File</button>	
   </form>
-</section>
-
 </div>
 <br>
 <br>

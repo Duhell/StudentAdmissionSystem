@@ -11,10 +11,10 @@
 	}else{
 		$dateToDownload = date("Y",time());
 	}
-	
 	if (isset($_POST['download'])) {
 		$sql = "SELECT * FROM records WHERE created_At LIKE '{$dateToDownload}%' ORDER BY lastname ASC";
       	$result = mysqli_query($conn,$sql);
+      	unset($_SESSION['yearResult']);
       	$i = 1;
       		if (mysqli_num_rows($result) > 0) {
       		 
