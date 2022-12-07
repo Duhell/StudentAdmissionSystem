@@ -3,8 +3,8 @@
 <?php
 	include 'views/head.php';
 	include 'backend/login.php';
-	
 ?>
+<div class="preload"></div>
 <!-- <=========================================END HEAD===============================> -->
 
 

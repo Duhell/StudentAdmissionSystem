@@ -31,6 +31,8 @@ document.addEventListener('click', e =>{
 	}
 
 })
+	
+	//courses
 
 function studentCourse(dep,cor){
 			
