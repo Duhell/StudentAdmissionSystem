@@ -8,7 +8,7 @@
 	if (isset($_POST['inputSearch'])) {
 		$searchResult = $_POST['inputSearch'];
 
-		$Searh_query = mysqli_query($conn,"SELECT * FROM records WHERE appid LIKE '{$searchResult}%' OR lastname LIKE '{$searchResult}%' OR firstname LIKE '{$searchResult}%' OR status LIKE '{$searchResult}%' OR middlename LIKE '{$searchResult}%' OR yearGrad LIKE '{$searchResult}%' OR firstchoice LIKE '{$searchResult}%' OR department LIKE '{$searchResult}%' OR track LIKE '{$searchResult}%'");
+		$Searh_query = mysqli_query($conn,"SELECT * FROM records WHERE appid LIKE '{$searchResult}%' OR lastname LIKE '{$searchResult}%' OR firstname LIKE '{$searchResult}%' OR status LIKE '{$searchResult}%' OR middlename LIKE '{$searchResult}%' OR yearGrad LIKE '{$searchResult}%' OR firstchoice LIKE '{$searchResult}%' OR department LIKE '{$searchResult}%' OR track LIKE '{$searchResult}%' OR created_At LIKE '{$searchResult}%'");
 
 
 		if (mysqli_num_rows($Searh_query) > 0) {
@@ -19,13 +19,12 @@
 		    <table cellpadding="0" cellspacing="0" border="0">
 		      <thead>
 		        <tr>
-		          <th>No.</th>
-		          <th>Applicant ID</th>
-		          <th>Student Name</th>
-		          <th>Requirements</th>
+		          <th style="width:10%;">No.</th>
+		          <th style="width:20%">Applicant ID</th>
+		          <th style="width:30%">Student Name</th>
+		          <th style="width:20%">Requirements</th>
 		          <th>Year</th>
-		          <th>Edit</th>
-		          <th>Delete</th>
+		          <th style="width:10%">Edit</th>
 		        </tr>
 		      </thead>
 		    </table>
@@ -37,16 +36,15 @@
       		<?php 
       		
       		$i = 1;
-			while ($row = $Searh_query->fetch_assoc()) {
+			while ($row = $Searh_query->fetch_array()) {
       		?>
         	<tr>
-	          <td><?= $i++ ?></td>
-	          <td><?= $row['appid']; ?></td>
-	          <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
-	          <td><?= $row['status'] ?></td>
-	          <td><?= date('Y',strtotime($row['created_At'])) ?></td>
-	          <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
-	          <td><a href="backend/delete.php?id=<?= $row['id'] ?>"> Delete </a></td>
+	          <td style="width:10%"><?= $i++ ?></td>
+	          <td style="width:20%"><?= $row['appid']; ?></td>
+	          <td style="width:30%"><?= strtoupper($row['lastname'])." ".strtoupper($row['firstname'])." ".strtoupper($row['extension']) ?></td>
+              <td style="width:20%" class="statusColor"><?= strtoupper($row['status']) ?></td>
+	          <td ><?= date('Y',strtotime($row['created_At'])) ?></td>
+	          <td style="width:10%"><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
         	</tr> 
  		 <?php
  		}

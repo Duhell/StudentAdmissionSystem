@@ -24,7 +24,7 @@
 		    $extension     =  $_POST['extension'];
 		    $age           =  $_POST['age'];
 		    $email         =  $_POST['email'];
-		    $cellnum       =  $_POST['cellnum'];
+		    $cellnum       =  $_POST['cellnumbers'];
 		    $telenum       =  $_POST['telenum'];
 			$dep           =  $_POST['dep'];
 			$course        =  $_POST['choice'];

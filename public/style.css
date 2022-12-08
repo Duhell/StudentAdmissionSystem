@@ -243,13 +243,12 @@ nav .navigation{
 .message{
 	text-align:center;
 	font-weight:600;
-	font-size:1.3rem;
-	color: #f0f0f0;
+	font-size:1.7rem;
+	color: var(--tupv-red);
 	margin: 30px auto;
 	width:40%;
 	padding:1em .5em;
 	border-radius:10px;
-	background-color:var(--tupv-red);
 }
 
 .container{
@@ -407,6 +406,7 @@ footer{
 .yearSelection{
 	margin-top: 0rem;
 	width:10%;
+	margin-bottom:10px;
 
 }
 .yearSelection .yearSelect{
@@ -419,7 +419,7 @@ footer{
 
 .list-header,
 .noStud{
-	max-width: 88%;
+	max-width: 92%;
 	padding:.5rem 0;
 	margin: .8rem auto .6rem auto;
 	display:flex;
@@ -449,13 +449,13 @@ footer{
 	position:relative;
 }
 .list-header .livesearch input{
-	padding: .6em 1.6rem;
+	padding: .6em 1.9rem;
 	width:100%;
 	border: 2px solid var(--tupv-red);
 } 
 .list-header .livesearch i{
 	position:absolute;
-	left: 6px;
+	left: 12px;
 	top: 12px;
 	color: var(--tupv-red);
 }

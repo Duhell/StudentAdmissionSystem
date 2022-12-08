@@ -15,12 +15,11 @@
 		    <table cellpadding="0" cellspacing="0" border="0">
 		      <thead>
 		        <tr>
-		          <th>No.</th>
-		          <th>Applicant ID</th>
-		          <th>Student Name</th>
+		          <th style="width:10%;">No.</th>
+		          <th style="width:20%">Applicant ID</th>
+		          <th style="width:30%">Student Name</th>
 		          <th>Requirements</th>
-		          <th>Edit</th>
-		          <th>Delete</th>
+		          <th style="width:10%">Edit</th>
 		        </tr>
 		      </thead>
 		    </table>
@@ -32,15 +31,14 @@
       		<?php 
       		
       		$i = 1;
-			while ($row = $query->fetch_assoc()) {
+			while ($row = $query->fetch_array()) {
       		?>
         	<tr>
-	          <td><?= $i++ ?></td>
-	          <td><?= $row['appid']; ?></td>
-	          <td><?= $row['lastname']." ".$row['firstname']." ".$row['extension'] ?></td>
-	          <td><?= $row['status'] ?></td>
-	          <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
-	          <td><a href="backend/delete.php?id=<?= $row['id'] ?>"> Delete </a></td>
+	          <td style="width:10%;"><?= $i++ ?></td>
+	          <td style="width:20%;"><?= $row['appid']; ?></td>
+	          <td style="width:30%"><?= strtoupper($row['lastname'])." ".strtoupper($row['firstname'])." ".strtoupper($row['extension']) ?></td>
+          	  <td class="statusColor"><?= strtoupper($row['status']) ?></td>
+	          <td style="width:10%;"><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
         	</tr> 
  		 <?php
  		}

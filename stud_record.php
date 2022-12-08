@@ -31,7 +31,7 @@
 		    $province = $field['province'];
 		    $zipcode = $field['zipcode'];
 		    $email = $field['email'];
-		    $cellnum = $field['cellnumber'];
+		    $cellnumber = $field['cellnumber'];
 		    $telenum = $field['telenumber'];
 		    $city = $field['city'];
 		    $yearGrad = $field['yearGrad'];
@@ -93,14 +93,6 @@
 					<input type="text" name="lname" value="<?= $lastname ?>">
 				</div>
 			</div>
-
-	<!-- ==========================END DISPLAY FULLNAME AND APPLICANT ID==========================> -->
-
-
-
-	<!-- ==========================PERSONAL INFO ==========================> -->
-
-
 			<div class="box3">
 				<label>First Name: </label>
 				<div class="box4">
@@ -175,7 +167,7 @@
 				<label>Cellphone Number: </label>
 				<div class="box4">
 					<span>:</span>
-					<input type="text" name="cellnum" value="<?= $cellnum ?>">
+					<input type="text" name="cellnumbers" value="<?= $cellnumber ?>" maxlength="11">
 				</div>
 			</div>
 			<div class="box3">
@@ -186,9 +178,6 @@
 				</div>
 			</div>
 		</div>
-
-	<!-- ==========================PREVIOUS SCHOOL==========================> -->
-
 		<div class="heading_title">School Last Attended</div>
 		<div class="box1">
 			<div class="box3">
@@ -220,11 +209,6 @@
 				</div>
 			</div>
 		</div>
-	<!-- ==========================END PREVIOUS SCHOOL==========================> -->
-
-	<!-- ==========================TUPV AND COURSES==========================> -->
-
-
 		<div class="heading_title">Campus</div>
 		<div class="box1">
 			<div class="box3">
@@ -251,11 +235,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- ==========================END TUPV AND COURSES==========================> -->
-
-	<!-- ==========================REQUIREMENTS==========================> -->
-
-
 	<div class="box">
 		<div class="heading_title">Requirements</div>
 			<div class="box2">
@@ -285,9 +264,6 @@
 					<input type="checkbox" name="brgycertif" value="1" <?php if ($brgycertif) {echo "checked";} ?>>
 				</div>
 		</div>
-
-	<!-- ==========================MEDICAL REQUIREMENTS==========================> -->
-
 		<div class="heading_title">Medical Requirements</div>
 		<div class="box2">
 				

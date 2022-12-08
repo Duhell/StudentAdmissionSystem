@@ -1,5 +1,6 @@
 const admin_login_form = document.querySelector('.admin-login')
 const stud_login_form = document.querySelector('.student-login')
+const statusColor = document.querySelector(".statusColor")
 
 window.addEventListener('load',()=>{
 	document.querySelector('#stud-btn').style.backgroundColor="#7D0216"
@@ -31,6 +32,7 @@ document.addEventListener('click', e =>{
 	}
 
 })
+
 	
 	//courses
 

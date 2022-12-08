@@ -7,7 +7,7 @@
 	include 'views/nav.php';
 	include "backend/config.php";
 	include 'backend/session.php';
-	include 'backend/addRecord.php';
+	include "backend/addRecord.php";
 ?>
 	<?php
 
@@ -120,7 +120,7 @@
 				</div>
 				<div class="form_group">
 					<label>Cellphone Number</label>
-					<input type="text" placeholder="(+63) 9822 12121" name="cellnum">
+					<input type="text" placeholder="(+63) 9822 12121" name="phoneNumber" maxlength="11">
 				</div>
 				<div class="form_group">
 					<label>Telephone Number</label>

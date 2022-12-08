@@ -36,12 +36,12 @@
     <table cellpadding="0" cellspacing="0" border="0">
       <thead>
         <tr>
-          <th>No.</th>
-          <th>Applicant ID</th>
-          <th>Student Name</th>
+          <th style="width:10%;">No.</th>
+          <th style="width:20%">Applicant ID</th>
+          <th style="width:30%">Student Name</th>
           <th>Requirements</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th style="width:10%">Edit</th>
+          <th style="width:10%">Delete</th>
         </tr>
       </thead>
     </table>
@@ -58,12 +58,12 @@
 
       	?>
         <tr>
-          <td><?= $i++ ?></td>
-          <td><?= $row['appid']; ?></td>
-          <td><?= strtoupper($row['lastname'])." ".strtoupper($row['firstname'])." ".strtoupper($row['extension']) ?></td>
-          <td><?= strtoupper($row['status']) ?></td>
-          <td><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
-          <td><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>,<?=$row['appid']?>' >Delete</button></td>
+          <td style="width:10%"><?= $i++ ?></td>
+          <td style="width:20%"><?= $row['appid']; ?></td>
+          <td style="width:30%"><?= strtoupper($row['lastname'])." ".strtoupper($row['firstname'])." ".strtoupper($row['extension']) ?></td>
+          <td class="statusColor"><?= strtoupper($row['status']) ?></td>
+          <td style="width:10%"><a href="stud_record.php?id=<?= $row['id'] ?>"> Edit </a></td>
+          <td style="width:10%"><button class="delete_btn" id='delte_<?= $row["id"]?>' data-id='<?= $row['id']?>,<?=$row['appid']?>' >Delete</button></td>
         </tr>
         <?php	}
 		}else{

@@ -17,7 +17,7 @@
 		$province = $_POST['province'];
 		$zipcode = $_POST['zipcode'];
 		$email = $_POST['email'];
-		$cellnum = $_POST['cellnum'];
+		$cell = $_POST['phoneNumber'];
 		$telenum = $_POST['telenum'];
 		$yearGrad = $_POST['yearGrad'];
 		$lastAttended = $_POST['lastAttended'];
@@ -49,10 +49,9 @@
 		//add record
 
 		$insert = mysqli_query($conn, "INSERT INTO records (appid,lastname,firstname,age,middlename,extension,birthdate,birthplace,gender,citizenship,unitno,barangay,city,province,zipcode,email,cellnumber,telenumber,lastAttended,schoolAddress,track,campus,department,firstchoice,status,yearGrad)
-			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cellnum','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course','$status','$yearGrad') ");
+			values ('$appid','$lname','$fname','$age','$middlename','$extension','$birthdate','$birthplace','$gender','$citizenship','$unitno','$barangay','$city','$province','$zipcode','$email','$cell','$telenum','$lastAttended','$schoolAddress','$track','$campus','$dep','$course','$status','$yearGrad') ");
 		if ($insert) {
 			$_SESSION['success_submit']	= "Successfully added your information.";
-			// header('location: ./student_page.php');	
 		}
 		else{
 			die("error". $conn -> connect_error);
