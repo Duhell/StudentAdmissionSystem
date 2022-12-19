@@ -117,7 +117,6 @@
 	color: var(--tupv-red);
 	font-size:var(--font-small);
 	font-weight:500;
-	box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
 	outline: none;
 	transition: .3s ease;
 }
@@ -466,6 +465,7 @@ table{
 }
 .tbl-header{
   background-color: var(--tupv-red);
+  border-radius:5px;
  }
 
 

@@ -35,15 +35,15 @@
 			<div class="fullnames">
 				<div class="form_group">
 					<label>Last Name</label>
-					<input type="text" placeholder="lastname" name="lname">
+					<input type="text" placeholder="Lastname" name="lname">
 				</div>
 				<div class="form_group">
 					<label>First Name</label>
-					<input type="text" placeholder="firstname" name="fname">
+					<input type="text" placeholder="Firstname" name="fname">
 				</div>
 				<div class="form_group">
 					<label>Middle Name</label>
-					<input type="text" placeholder="middlename" name="middlename">
+					<input type="text" placeholder="Middlename" name="middlename">
 				</div>
 				<div class="form_group">
 					<label>Extension</label>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="form_group">
 					<label>Birth Place</label>
-					<input type="text" placeholder="place of birth" name="birthplace">
+					<input type="text" placeholder="Place of Birth" name="birthplace">
 				</div>
 				<div class="form_group">
 					<label>Gender</label>

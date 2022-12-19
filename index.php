@@ -63,7 +63,7 @@
 				</div>
 				<div class="app-pass">
 					<label>Access Code</label>
-					<input type="text" placeholder="Code" name="code" required autocomplete="off" autosave="off">
+					<input type="password" placeholder="Code" name="code" required autocomplete="off" autosave="off">
 				</div>
 				
 				<input type="submit" name="login" value="LOGIN" class="btn">

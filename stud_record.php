@@ -76,7 +76,7 @@
 
 <div class="stud_header_edit">
 	<div class="studName">
-		<span><?= $lastname." ".$firstname." ".$extension ?></span>
+		<span><?= strtoupper($lastname." ".$firstname." ".$extension) ?></span>
 		<span><?= $appid ?></span>
 	</div>
 	<br>
